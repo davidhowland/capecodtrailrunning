@@ -4,7 +4,29 @@ theme: just-the-docs
 
 url: https://capecodtrailrunning.com
 
-aux_links:
-  Template Repository: #https://github.com/just-the-docs/just-the-docs-template
+# aux_links:
+#   Template Repository: #https://github.com/just-the-docs/just-the-docs-template
 
 color_scheme: basic
+
+collections:
+  routes:
+    permalink: "/:collection/:path/"
+    output: true
+  trailheads:
+    permalink: "/:collection/:path/"
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "routes"
+    values:
+      layout: "route"
+  -
+    scope:
+      path: ""
+      type: "trailheads"
+    values:
+      layout: "trailhead"
